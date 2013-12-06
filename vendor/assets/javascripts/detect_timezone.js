@@ -180,76 +180,259 @@ jstz.determine_timezone = function () {
  */
 jstz.olson.timezones = {
     '-720,0'   : new jstz.TimeZone('-12:00', 'Etc/GMT+12', false),
-    '-660,0'   : new jstz.TimeZone('-11:00', 'Pacific/Pago_Pago', false),
-    '-600,1'   : new jstz.TimeZone('-11:00', 'America/Adak', true),
-    '-660,1,s' : new jstz.TimeZone('-11:00', 'Pacific/Apia', true),
-    '-600,0'   : new jstz.TimeZone('-10:00', 'Pacific/Honolulu', false),
+
+    '-660,0'   : new jstz.TimeZone('-11:00', 'American Samoa', false),
+    '-600,1'   : new jstz.TimeZone('-11:00', 'International Date Line West', true),
+    '-660,1,s' : new jstz.TimeZone('-11:00', 'Midway Island', true),
+
+    '-600,0'   : new jstz.TimeZone('-10:00', 'Hawaii', false),
+
     '-570,0'   : new jstz.TimeZone('-10:30', 'Pacific/Marquesas', false),
-    '-540,0'   : new jstz.TimeZone('-09:00', 'Pacific/Gambier', false),
-    '-540,1'   : new jstz.TimeZone('-09:00', 'America/Anchorage', true),
-    '-480,1'   : new jstz.TimeZone('-08:00', 'America/Los_Angeles', true),
-    '-480,0'   : new jstz.TimeZone('-08:00', 'Pacific/Pitcairn', false),
-    '-420,0'   : new jstz.TimeZone('-07:00', 'America/Phoenix', false),
-    '-420,1'   : new jstz.TimeZone('-07:00', 'America/Denver', true),
-    '-360,0'   : new jstz.TimeZone('-06:00', 'America/Guatemala', false),
-    '-360,1'   : new jstz.TimeZone('-06:00', 'America/Chicago', true),
-    '-360,1,s' : new jstz.TimeZone('-06:00', 'Pacific/Easter', true),
-    '-300,0'   : new jstz.TimeZone('-05:00', 'America/Bogota', false),
-    '-300,1'   : new jstz.TimeZone('-05:00', 'America/New_York', true),
-    '-270,0'   : new jstz.TimeZone('-04:30', 'America/Caracas', false),
-    '-240,1'   : new jstz.TimeZone('-04:00', 'America/Halifax', true),
-    '-240,0'   : new jstz.TimeZone('-04:00', 'America/Santo_Domingo', false),
-    '-240,1,s' : new jstz.TimeZone('-04:00', 'America/Asuncion', true),
-    '-210,1'   : new jstz.TimeZone('-03:30', 'America/St_Johns', true),
-    '-180,1'   : new jstz.TimeZone('-03:00', 'America/Godthab', true),
-    '-180,0'   : new jstz.TimeZone('-03:00', 'America/Argentina/Buenos_Aires', false),
-    '-180,1,s' : new jstz.TimeZone('-03:00', 'America/Montevideo', true),
-    '-120,0'   : new jstz.TimeZone('-02:00', 'America/Noronha', false),
+
+    '-540,0'   : new jstz.TimeZone('-09:00', 'Alaska', false),
+    '-540,1'   : new jstz.TimeZone('-09:00', 'Alaska', true),
+
+    '-480,1'   : new jstz.TimeZone('-08:00', 'Pacific Time (US & Canada)', true),
+    '-480,0'   : new jstz.TimeZone('-08:00', 'Tijuana', false),
+
+    '-420,0'   : new jstz.TimeZone('-07:00', 'Arizona', false),
+    '-420,1'   : new jstz.TimeZone('-07:00', 'Mountain Time (US & Canada)', true),
+// #		Chihuahua 		Mazatlan
+
+    '-360,0'   : new jstz.TimeZone('-06:00', 'Central Time (US & Canada)', false),
+    '-360,1'   : new jstz.TimeZone('-06:00', 'Central America', true),
+    '-360,1,s' : new jstz.TimeZone('-06:00', 'Mexico City', true),
+
+		// * UTC -06:00 *
+		// Central America
+		// Central Time (US & Canada)
+		// Guadalajara
+		// Mexico City
+		// Monterrey
+		// Saskatchewan
+
+
+    '-300,0'   : new jstz.TimeZone('-05:00', 'Bogota', false),
+    '-300,1'   : new jstz.TimeZone('-05:00', 'Eastern Time (US & Canada)', true),
+		// * UTC -05:00 *
+		// Bogota
+		// Eastern Time (US & Canada)
+		// Indiana (East)
+		// Lima
+		// Quito
+
+    '-270,0'   : new jstz.TimeZone('-04:30', 'Caracas', false),
+
+    '-240,1'   : new jstz.TimeZone('-04:00', 'Atlantic Time (Canada)', true),
+    '-240,0'   : new jstz.TimeZone('-04:00', 'Georgetown', false),
+    '-240,1,s' : new jstz.TimeZone('-04:00', 'Santiago', true),
+		// * UTC -04:00 *
+		// Atlantic Time (Canada)
+		// Georgetown
+		// La Paz
+		// Santiago
+
+    '-210,1'   : new jstz.TimeZone('-03:30', 'Newfoundland', true),
+
+    '-180,1'   : new jstz.TimeZone('-03:00', 'Brasilia', true),
+    '-180,0'   : new jstz.TimeZone('-03:00', 'Buenos_Aires', false),
+    '-180,1,s' : new jstz.TimeZone('-03:00', 'Montevideo', true),
+		// * UTC -03:00 *
+		// Brasilia
+		// Buenos Aires
+		// Greenland
+		// Montevideo
+
+    '-120,0'   : new jstz.TimeZone('-02:00', 'Mid-Atlantic', false),
     '-120,1'   : new jstz.TimeZone('-02:00', 'Etc/GMT+2', true),
-    '-60,1'    : new jstz.TimeZone('-01:00', 'Atlantic/Azores', true),
-    '-60,0'    : new jstz.TimeZone('-01:00', 'Atlantic/Cape_Verde', false),
-    '0,0'      : new jstz.TimeZone('00:00', 'Etc/UTC', false),
-    '0,1'      : new jstz.TimeZone('00:00', 'Europe/London', true),
-    '60,1'     : new jstz.TimeZone('+01:00', 'Europe/Berlin', true),
-    '60,0'     : new jstz.TimeZone('+01:00', 'Africa/Lagos', false),
-    '60,1,s'   : new jstz.TimeZone('+01:00', 'Africa/Windhoek', true),
-    '120,1'    : new jstz.TimeZone('+02:00', 'Asia/Beirut', true),
-    '120,0'    : new jstz.TimeZone('+02:00', 'Africa/Johannesburg', false),
-    '180,1'    : new jstz.TimeZone('+03:00', 'Europe/Moscow', true),
-    '180,0'    : new jstz.TimeZone('+03:00', 'Asia/Baghdad', false),
-    '210,1'    : new jstz.TimeZone('+03:30', 'Asia/Tehran', true),
-    '240,0'    : new jstz.TimeZone('+04:00', 'Asia/Dubai', false),
-    '240,1'    : new jstz.TimeZone('+04:00', 'Asia/Yerevan', true),
-    '270,0'    : new jstz.TimeZone('+04:30', 'Asia/Kabul', false),
-    '300,1'    : new jstz.TimeZone('+05:00', 'Asia/Yekaterinburg', true),
-    '300,0'    : new jstz.TimeZone('+05:00', 'Asia/Karachi', false),
-    '330,0'    : new jstz.TimeZone('+05:30', 'Asia/Kolkata', false),
-    '345,0'    : new jstz.TimeZone('+05:45', 'Asia/Kathmandu', false),
-    '360,0'    : new jstz.TimeZone('+06:00', 'Asia/Dhaka', false),
-    '360,1'    : new jstz.TimeZone('+06:00', 'Asia/Omsk', true),
-    '390,0'    : new jstz.TimeZone('+06:30', 'Asia/Rangoon', false),
-    '420,1'    : new jstz.TimeZone('+07:00', 'Asia/Krasnoyarsk', true),
-    '420,0'    : new jstz.TimeZone('+07:00', 'Asia/Jakarta', false),
-    '480,0'    : new jstz.TimeZone('+08:00', 'Asia/Shanghai', false),
-    '480,1'    : new jstz.TimeZone('+08:00', 'Asia/Irkutsk', true),
-    '525,0'    : new jstz.TimeZone('+08:45', 'Australia/Eucla', true),
-    '525,1,s'  : new jstz.TimeZone('+08:45', 'Australia/Eucla', true),
-    '540,1'    : new jstz.TimeZone('+09:00', 'Asia/Yakutsk', true),
-    '540,0'    : new jstz.TimeZone('+09:00', 'Asia/Tokyo', false),
-    '570,0'    : new jstz.TimeZone('+09:30', 'Australia/Darwin', false),
-    '570,1,s'  : new jstz.TimeZone('+09:30', 'Australia/Adelaide', true),
-    '600,0'    : new jstz.TimeZone('+10:00', 'Australia/Brisbane', false),
-    '600,1'    : new jstz.TimeZone('+10:00', 'Asia/Vladivostok', true),
-    '600,1,s'  : new jstz.TimeZone('+10:00', 'Australia/Sydney', true),
-    '630,1,s'  : new jstz.TimeZone('+10:30', 'Australia/Lord_Howe', true),
-    '660,1'    : new jstz.TimeZone('+11:00', 'Asia/Kamchatka', true),
-    '660,0'    : new jstz.TimeZone('+11:00', 'Pacific/Noumea', false),
-    '690,0'    : new jstz.TimeZone('+11:30', 'Pacific/Norfolk', false),
-    '720,1,s'  : new jstz.TimeZone('+12:00', 'Pacific/Auckland', true),
-    '720,0'    : new jstz.TimeZone('+12:00', 'Pacific/Tarawa', false),
-    '765,1,s'  : new jstz.TimeZone('+12:45', 'Pacific/Chatham', true),
-    '780,0'    : new jstz.TimeZone('+13:00', 'Pacific/Tongatapu', false),
-    '840,0'    : new jstz.TimeZone('+14:00', 'Pacific/Kiritimati', false)
+		// * UTC -02:00 *
+		// Mid-Atlantic
+
+    '-60,1'    : new jstz.TimeZone('-01:00', 'Azores', true),
+    '-60,0'    : new jstz.TimeZone('-01:00', 'Cape Verde Is.', false),
+		// * UTC -01:00 *
+		// Azores
+		// Cape Verde Is.
+
+    '0,0'      : new jstz.TimeZone('00:00', 'UTC', false),
+    '0,1'      : new jstz.TimeZone('00:00', 'London', true),
+		// * UTC +00:00 *
+		// Casablanca
+		// Dublin
+		// Edinburgh
+		// Lisbon
+		// London
+		// Monrovia
+		// UTC
+
+    '60,1'     : new jstz.TimeZone('+01:00', 'Berlin', true),
+    '60,0'     : new jstz.TimeZone('+01:00', 'West Central Africa', false),
+    '60,1,s'   : new jstz.TimeZone('+01:00', 'Warsaw', true),
+		// * UTC +01:00 *
+		// Amsterdam
+		// Belgrade
+		// Berlin
+		// Bern
+		// Bratislava
+		// Brussels
+		// Budapest
+		// Copenhagen
+		// Ljubljana
+		// Madrid
+		// Paris
+		// Prague
+		// Rome
+		// Sarajevo
+		// Skopje
+		// Stockholm
+		// Vienna
+		// Warsaw
+		// West Central Africa
+		// Zagreb
+
+
+    '120,1'    : new jstz.TimeZone('+02:00', 'Athens', true),
+    '120,0'    : new jstz.TimeZone('+02:00', 'Cairo', false),
+		// * UTC +02:00 *
+		// Athens
+		// Bucharest
+		// Cairo
+		// Harare
+		// Helsinki
+		// Istanbul
+		// Jerusalem
+		// Kyiv
+		// Pretoria
+		// Riga
+		// Sofia
+		// Tallinn
+		// Vilnius
+
+
+    '180,1'    : new jstz.TimeZone('+03:00', 'Minsk', true),
+    '180,0'    : new jstz.TimeZone('+03:00', 'Baghdad', false),
+		// * UTC +03:00 *
+		// Baghdad
+		// Kuwait
+		// Minsk
+		// Nairobi
+		// Riyadh
+
+    '210,1'    : new jstz.TimeZone('+03:30', 'Tehran', true),
+
+    '240,0'    : new jstz.TimeZone('+04:00', 'Abu Dhabi', false),
+    '240,1'    : new jstz.TimeZone('+04:00', 'Yerevan', true),
+		// * UTC +04:00 *
+		// Abu Dhabi
+		// Baku
+		// Moscow
+		// Muscat
+		// St. Petersburg
+		// Tbilisi
+		// Volgograd
+		// Yerevan
+
+    '270,0'    : new jstz.TimeZone('+04:30', 'Kabul', false),
+
+    '300,1'    : new jstz.TimeZone('+05:00', 'Islamabad', true),
+    '300,0'    : new jstz.TimeZone('+05:00', 'Karachi', false),
+		// * UTC +05:00 *
+		// Islamabad
+		// Karachi
+		// Tashkent
+
+    '330,0'    : new jstz.TimeZone('+05:30', 'Kolkata', false),
+		// * UTC +05:30 *
+		// Chennai
+		// Kolkata
+		// Mumbai
+		// New Delhi
+		// Sri Jayawardenepura
+
+    '345,0'    : new jstz.TimeZone('+05:45', 'Kathmandu', false),
+
+    '360,0'    : new jstz.TimeZone('+06:00', 'Dhaka', false),
+    '360,1'    : new jstz.TimeZone('+06:00', 'Ekaterinburg', true),
+		// * UTC +06:00 *
+		// Almaty
+		// Astana
+		// Dhaka
+		// Ekaterinburg
+
+    '390,0'    : new jstz.TimeZone('+06:30', 'Rangoon', false),
+
+    '420,1'    : new jstz.TimeZone('+07:00', 'Novosibirsk', true),
+    '420,0'    : new jstz.TimeZone('+07:00', 'Jakarta', false),
+		// * UTC +07:00 *
+		// Bangkok
+		// Hanoi
+		// Jakarta
+		// Novosibirsk
+
+    '480,0'    : new jstz.TimeZone('+08:00', 'Beijing', false),
+    '480,1'    : new jstz.TimeZone('+08:00', 'Kuala Lumpur', true),
+		// * UTC +08:00 *
+		// Beijing
+		// Chongqing
+		// Hong Kong
+		// Krasnoyarsk
+		// Kuala Lumpur
+		// Perth
+		// Singapore
+		// Taipei
+		// Ulaanbaatar
+		// Urumqi
+
+    '540,1'    : new jstz.TimeZone('+09:00', 'Yakutsk', true),
+    '540,0'    : new jstz.TimeZone('+09:00', 'Tokyo', false),
+		// * UTC +09:00 *
+		// Irkutsk
+		// Osaka
+		// Sapporo
+		// Seoul
+		// Tokyo
+
+    '570,0'    : new jstz.TimeZone('+09:30', 'Darwin', false),
+    '570,1,s'  : new jstz.TimeZone('+09:30', 'Adelaide', true),
+
+    '600,0'    : new jstz.TimeZone('+10:00', 'Brisbane', false),
+    '600,1'    : new jstz.TimeZone('+10:00', 'Canberra', true),
+    '600,1,s'  : new jstz.TimeZone('+10:00', 'Sydney', true),
+		// * UTC +10:00 *
+		// Brisbane
+		// Canberra
+		// Guam
+		// Hobart
+		// Melbourne
+		// Port Moresby
+		// Sydney
+		// Yakutsk
+
+
+    '660,1'    : new jstz.TimeZone('+11:00', 'New Caledonia', true),
+    '660,0'    : new jstz.TimeZone('+11:00', 'Solomon Is.', false),
+		// * UTC +11:00 *
+		// New Caledonia
+		// Solomon Is.
+		// Vladivostok
+
+    '720,1,s'  : new jstz.TimeZone('+12:00', 'Auckland', true),
+    '720,0'    : new jstz.TimeZone('+12:00', 'Fiji', false),
+		// * UTC +12:00 *
+		// Auckland
+		// Fiji
+		// Kamchatka
+		// Magadan
+		// Marshall Is.
+		// Wellington
+
+    '765,1,s'  : new jstz.TimeZone('+12:45', 'Chatham Is.', true),
+
+    '780,0'    : new jstz.TimeZone('+13:00', 'Samoa', false),
+		// * UTC +13:00 *
+		// Nuku'alofa
+		// Samoa
+		// Tokelau Is.
 };
 
 /**
@@ -263,35 +446,35 @@ jstz.olson.timezones = {
  * Each value is a date denoting when daylight savings starts for that timezone.
  */
 jstz.olson.dst_start_dates = {
-    'America/Denver' : new Date(2011, 2, 13, 3, 0, 0, 0),
-    'America/Mazatlan' : new Date(2011, 3, 3, 3, 0, 0, 0),
-    'America/Chicago' : new Date(2011, 2, 13, 3, 0, 0, 0),
-    'America/Mexico_City' : new Date(2011, 3, 3, 3, 0, 0, 0),
-    'Atlantic/Stanley' : new Date(2011, 8, 4, 7, 0, 0, 0),
-    'America/Asuncion' : new Date(2011, 9, 2, 3, 0, 0, 0),
-    'America/Santiago' : new Date(2011, 9, 9, 3, 0, 0, 0),
-    'America/Campo_Grande' : new Date(2011, 9, 16, 5, 0, 0, 0),
-    'America/Montevideo' : new Date(2011, 9, 2, 3, 0, 0, 0),
-    'Brasilia' : new Date(2011, 9, 16, 5, 0, 0, 0),
-    'America/Los_Angeles' : new Date(2011, 2, 13, 8, 0, 0, 0),
-    'America/Santa_Isabel' : new Date(2011, 3, 5, 8, 0, 0, 0),
-    'America/Havana' : new Date(2011, 2, 13, 2, 0, 0, 0),
-    'America/New_York' : new Date(2011, 2, 13, 7, 0, 0, 0),
-    'Asia/Gaza' : new Date(2011, 2, 26, 23, 0, 0, 0),
-    'Asia/Beirut' : new Date(2011, 2, 27, 1, 0, 0, 0),
-    'Europe/Minsk' : new Date(2011, 2, 27, 3, 0, 0, 0),
-    'Europe/Istanbul' : new Date(2011, 2, 27, 7, 0, 0, 0),
-    'Asia/Damascus' : new Date(2011, 3, 1, 2, 0, 0, 0),
-    'Asia/Jerusalem' : new Date(2011, 3, 1, 6, 0, 0, 0),
-    'Africa/Cairo' : new Date(2011, 3, 29, 4, 0, 0, 0),
-    'Asia/Yerevan' : new Date(2011, 2, 27, 4, 0, 0, 0),
-    'Asia/Baku'    : new Date(2011, 2, 27, 8, 0, 0, 0),
-    'Pacific/Auckland' : new Date(2011, 8, 26, 7, 0, 0, 0),
-    'Pacific/Fiji' : new Date(2010, 11, 29, 23, 0, 0, 0),
-    'America/Halifax' : new Date(2011, 2, 13, 6, 0, 0, 0),
-    'America/Goose_Bay' : new Date(2011, 2, 13, 2, 1, 0, 0),
-    'America/Miquelon' : new Date(2011, 2, 13, 5, 0, 0, 0),
-    'America/Godthab' : new Date(2011, 2, 27, 1, 0, 0, 0)
+    // 'America/Denver' : new Date(2011, 2, 13, 3, 0, 0, 0),
+    // 'America/Mazatlan' : new Date(2011, 3, 3, 3, 0, 0, 0),
+    // 'Central Time (US & Canada)' : new Date(2011, 2, 13, 3, 0, 0, 0),
+    // 'Mexico_City' : new Date(2011, 3, 3, 3, 0, 0, 0),
+    // 'Atlantic/Stanley' : new Date(2011, 8, 4, 7, 0, 0, 0),
+    // 'America/Asuncion' : new Date(2011, 9, 2, 3, 0, 0, 0),
+    // 'America/Santiago' : new Date(2011, 9, 9, 3, 0, 0, 0),
+    // 'America/Campo_Grande' : new Date(2011, 9, 16, 5, 0, 0, 0),
+    // 'America/Montevideo' : new Date(2011, 9, 2, 3, 0, 0, 0),
+    // 'Brasilia' : new Date(2011, 9, 16, 5, 0, 0, 0),
+    // 'America/Los_Angeles' : new Date(2011, 2, 13, 8, 0, 0, 0),
+    // 'America/Santa_Isabel' : new Date(2011, 3, 5, 8, 0, 0, 0),
+    // 'America/Havana' : new Date(2011, 2, 13, 2, 0, 0, 0),
+    // 'America/New_York' : new Date(2011, 2, 13, 7, 0, 0, 0),
+    // 'Asia/Gaza' : new Date(2011, 2, 26, 23, 0, 0, 0),
+    // 'Asia/Beirut' : new Date(2011, 2, 27, 1, 0, 0, 0),
+    // 'Europe/Minsk' : new Date(2011, 2, 27, 3, 0, 0, 0),
+    // 'Europe/Istanbul' : new Date(2011, 2, 27, 7, 0, 0, 0),
+    // 'Asia/Damascus' : new Date(2011, 3, 1, 2, 0, 0, 0),
+    // 'Asia/Jerusalem' : new Date(2011, 3, 1, 6, 0, 0, 0),
+    // 'Africa/Cairo' : new Date(2011, 3, 29, 4, 0, 0, 0),
+    // 'Asia/Yerevan' : new Date(2011, 2, 27, 4, 0, 0, 0),
+    // 'Asia/Baku'    : new Date(2011, 2, 27, 8, 0, 0, 0),
+    // 'Pacific/Auckland' : new Date(2011, 8, 26, 7, 0, 0, 0),
+    // 'Pacific/Fiji' : new Date(2010, 11, 29, 23, 0, 0, 0),
+    // 'America/Halifax' : new Date(2011, 2, 13, 6, 0, 0, 0),
+    // 'America/Goose_Bay' : new Date(2011, 2, 13, 2, 1, 0, 0),
+    // 'America/Miquelon' : new Date(2011, 2, 13, 5, 0, 0, 0),
+    // 'America/Godthab' : new Date(2011, 2, 27, 1, 0, 0, 0)
 };
 
 /**
@@ -302,15 +485,15 @@ jstz.olson.dst_start_dates = {
  * starts for the regions.
  */
 jstz.olson.ambiguity_list = {
-    'America/Denver' : ['America/Denver', 'America/Mazatlan'],
-    'America/Chicago' : ['America/Chicago', 'America/Mexico_City'],
-    'America/Asuncion' : ['Atlantic/Stanley', 'America/Asuncion', 'America/Santiago', 'America/Campo_Grande'],
-    'America/Montevideo' : ['America/Montevideo', 'Brasilia'],
-    'Asia/Beirut' : ['Asia/Gaza', 'Asia/Beirut', 'Europe/Minsk', 'Europe/Istanbul', 'Asia/Damascus', 'Asia/Jerusalem', 'Africa/Cairo'],
-    'Asia/Yerevan' : ['Asia/Yerevan', 'Asia/Baku'],
-    'Pacific/Auckland' : ['Pacific/Auckland', 'Pacific/Fiji'],
-    'America/Los_Angeles' : ['America/Los_Angeles', 'America/Santa_Isabel'],
-    'America/New_York' : ['America/Havana', 'America/New_York'],
-    'America/Halifax' : ['America/Goose_Bay', 'America/Halifax'],
-    'America/Godthab' : ['America/Miquelon', 'America/Godthab']
+    // 'America/Denver' : ['America/Denver', 'America/Mazatlan'],
+    // 'Central Time (US & Canada)' : ['Central Time (US & Canada)', 'Mexico_City'],
+    // 'America/Asuncion' : ['Atlantic/Stanley', 'America/Asuncion', 'America/Santiago', 'America/Campo_Grande'],
+    // 'America/Montevideo' : ['America/Montevideo', 'Brasilia'],
+    // 'Asia/Beirut' : ['Asia/Gaza', 'Asia/Beirut', 'Europe/Minsk', 'Europe/Istanbul', 'Asia/Damascus', 'Asia/Jerusalem', 'Africa/Cairo'],
+    // 'Asia/Yerevan' : ['Asia/Yerevan', 'Asia/Baku'],
+    // 'Pacific/Auckland' : ['Pacific/Auckland', 'Pacific/Fiji'],
+    // 'America/Los_Angeles' : ['America/Los_Angeles', 'America/Santa_Isabel'],
+    // 'America/New_York' : ['America/Havana', 'America/New_York'],
+    // 'America/Halifax' : ['America/Goose_Bay', 'America/Halifax'],
+    // 'America/Godthab' : ['America/Miquelon', 'America/Godthab']
 };
