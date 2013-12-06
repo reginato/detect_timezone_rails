@@ -272,7 +272,7 @@ jstz.olson.dst_start_dates = {
     'America/Santiago' : new Date(2011, 9, 9, 3, 0, 0, 0),
     'America/Campo_Grande' : new Date(2011, 9, 16, 5, 0, 0, 0),
     'America/Montevideo' : new Date(2011, 9, 2, 3, 0, 0, 0),
-    'America/Sao_Paulo' : new Date(2011, 9, 16, 5, 0, 0, 0),
+    'Brasilia' : new Date(2011, 9, 16, 5, 0, 0, 0),
     'America/Los_Angeles' : new Date(2011, 2, 13, 8, 0, 0, 0),
     'America/Santa_Isabel' : new Date(2011, 3, 5, 8, 0, 0, 0),
     'America/Havana' : new Date(2011, 2, 13, 2, 0, 0, 0),
